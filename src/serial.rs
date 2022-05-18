@@ -1151,7 +1151,7 @@ impl_pin_traits! {
             TX: PA2;
             RX: PA3;
             RTS_DE: PB1;
-            CTS: PA6;
+            CTS: PB13;
         }
     }
 }
