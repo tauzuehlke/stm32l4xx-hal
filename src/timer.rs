@@ -337,10 +337,18 @@ hal! {
     // feature = "stm32l4r7",
     // feature = "stm32l4s7",
     // feature = "stm32l4r9",
-    // feature = "stm32l4s9",
 ))]
 hal! {
     TIM4:  (tim4, free_running_tim4, APB1R1, u16, timclk1),
+    TIM5:  (tim5, free_running_tim5, APB1R1, u32, timclk1),
+    TIM17: (tim17, free_running_tim17, APB2, u16, timclk2),
+}
+
+#[cfg(any(
+    feature = "stm32l4s9",
+))]
+hal! {
+    TIM4:  (tim4, free_running_tim4, APB1R1, u32, timclk1),
     TIM5:  (tim5, free_running_tim5, APB1R1, u32, timclk1),
     TIM17: (tim17, free_running_tim17, APB2, u16, timclk2),
 }
